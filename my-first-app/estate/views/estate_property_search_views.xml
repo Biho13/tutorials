@@ -1,0 +1,25 @@
+<?xml version = "1.0" encoding="utf-8" ?>
+<odoo>
+     <!--  Développement de la vue recherche -->
+
+     <record model="ir.ui.view" id="properties_search_view">
+        <field name="name">Properties Search</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+             <search>
+                 <field name ="name"/>
+                 <field name ="postcode"/>
+                 <field name ="expected_price"/>
+                 <field name ="bedrooms"/>
+                 <field name ="living_area"/>
+                 <field name ="facades"/>
+
+                  <filter string="Status" name="status" />
+                    <group expand="1" string="Group By">
+                        <filter string="Postcode" name="postcode" context="{'group_by':'postcode'}"/>
+                    </group>
+             </search>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version = "1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!--   La vue liste de EstatePropertyTag -->
+      <record model="ir.ui.view" id="properties_list_view">
+        <field name="name">Tag List</field>
+        <field name="model">estate.property.tag</field>
+        <field name="arch" type="xml">
+             <tree>
+                 <field name ="name_tag"/>
+             </tree>
+        </field>
+    </record>
+
+</odoo>
